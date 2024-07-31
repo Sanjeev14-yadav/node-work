@@ -1,2 +1,3 @@
 git commit --amend --author="Sanjeev14-yadav sanjeev.y@virtualglobetechnology.com"
 i need to perform push & pull operation smoothly.
+working on solution
