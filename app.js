@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const mysql = require('mysql');
 const app = express();
 const port = 3000; // Define the port number
 
@@ -15,15 +15,18 @@ app.use(express.static('public')); // Serve files from the 'public' directory
 const secretKey = 'your_secret_key'; // Replace with your actual secret key
 
 // Create a MySQL connection pool
-const pool = mysql.createPool({
-  host: '13.201.81.204',
-  port: 3306,
-  user: 'root',
-  password: 'Sanjeev@vgt1',
-  database: 'nodeapp',
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
+
+
+const connection = mysql.createConnection({
+    host: 'database-1.cnk6ca2028fj.ap-southeast-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'MyPassword123.',
+    database: 'database-1'
+});
+
+connection.connect((err) => {
+    if (err) throw err;
+    console.log('Connected to the database!');
 });
 
 // Middleware to verify JWT
