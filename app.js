@@ -18,7 +18,7 @@ const pool = mysql.createPool({
     host: 'database-1.cnk6ca2028fj.ap-southeast-1.rds.amazonaws.com',
     user: 'admin',
     password: 'MyPassword123.',
-    database: 'database-1',
+    database: 'task_db',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
