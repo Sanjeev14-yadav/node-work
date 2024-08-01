@@ -3,7 +3,7 @@ const mysql = require('mysql2/promise');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mysql = require('mysql');
+
 const app = express();
 const port = 3000; // Define the port number
 
