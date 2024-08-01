@@ -24,10 +24,7 @@ const connection = mysql.createConnection({
     database: 'database-1'
 });
 
-connection.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to the database!');
-});
+
 
 // Middleware to verify JWT
 const verifyToken = (req, res, next) => {
